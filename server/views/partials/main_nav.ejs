@@ -1,0 +1,95 @@
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"><img src="../../../Assets/images/team_logo.png"/></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      
+             
+        <% if (title == "Home"){ %>        
+          <li class="nav-item-s">
+            <a style="color: #1b7ced;" class="nav-link popup2" href="/home"><i class="fas fa-home"></i> Home </a>
+          </li>
+          <% } else  { %>
+          <li class="nav-item-s">        
+            <a class="nav-link popup2" style="color: white;" href="/home"><i class="fas fa-home"></i></i> Home </a>
+          </li>
+          <% } %>
+  
+          <% if (title == "About Us"){ %>        
+            <li class="nav-item-s">
+              <a style="color: #1663be;" class="nav-link popup2" href="/group"><i class="fas fa-users"></i></i> About Us </a>
+            </li>
+            <% } else  { %>
+            <li class="nav-item-s">        
+              <a class="nav-link popup2" style="color: white;" href="/group"><i class="fas fa-users"></i></i> About Us </a>
+            </li>
+            <% } %>
+  
+            <% if (title == "Projects"){ %>        
+              <li class="nav-item-s">
+                <a style="color: #1663be;" class="nav-link popup2" href="/projects"><i class="fas fa-info"></i> Project Info </a>
+              </li>
+              <% } else  { %>
+              <li class="nav-item-s">        
+                <a class="nav-link popup2" style="color: white;" href="/projects"><i class="fas fa-info"></i> Project Info </a>
+              </li>
+              <% } %>
+  
+  
+              <% if (title == "Surveys"){ %>        
+                  <li class="nav-item-s">
+                      <a style="color: #1663be;" class="nav-link popup2" href="/survey-list" style=><i class="fas fa-poll"></i> Surveys </a>
+                  </li>
+              <% } else  { %>
+                  <li class="nav-item-s">        
+                    <a class="nav-link popup2" style="color: white;" href="/survey-list"><i class="fas fa-poll"></i> Surveys </a>
+                  </li>
+              <% } %>
+                        
+                  
+                  
+                 
+                  <% if(typeof userId=='string' && userId) {%>
+                  <% if (title == "My Surveys"){ %>
+                      <li class="nav-item-s">
+                        <a class="nav-link popup2" style="color: #1663be;" href="/mypage"><i class="fas fa-user"></i> My Surveys </a>
+                      </li>
+                    <% } else  { %>
+                    <li class="nav-item-s">
+                        <a class="nav-link popup2" style="color: white;" href="/mypage"><i class="fas fa-user"></i> My Surveys </a>
+                      </li>
+                    <% }%>
+                      <li class="nav-item-s">
+                        <a class="nav-link welcome" style="color: white;"> Welcome, <%= userId %></a>
+                      </li>
+                      <li class="nav-item-s">        
+                        <a class="nav-link popup2" style="color: red;" href="/logout"> Logout <i class="fas fa-lg fa-sign-out-alt"></i></a>                      
+                      </li>
+                      
+                  <% } else {%>
+                      <% if (title == "Login"){ %>        
+                        <li class="nav-item-s">
+                          <a style="color: #1b7ced;" class="nav-link popup2" href="/login">
+                             Login <i class="fas fa-lg fa-sign-in-alt"></i></a>
+                        </li>
+                      <% } else  { %>
+                        <li class="nav-item-s">        
+                          <a class="nav-link popup2" style="color: white;" href="/login">
+                          Login <i class="fas fa-lg fa-sign-in-alt"></i></a>
+                        </li>
+                      <% } %>
+                      
+                      
+                  <% } %>
+                  
+                </ul>
+                </div>
+      
+    </div>
+  </nav>

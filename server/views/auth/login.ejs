@@ -1,0 +1,73 @@
+
+
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/main_nav.ejs %>
+
+<!-- Content for the Add page -->
+<div class='container-fluid'>
+  <div class="row outerDiv">
+   
+
+
+
+    <div class="col">
+<div class="container">
+    <% if(messages.length > 0) {%>
+        <div class="alert alert-danger">
+            <%= messages %>
+        </div>
+    <% } %>
+    
+    <div class="row justify-content-center">
+      
+    <a href="/"><img style= "margin-top:75px;" class = "loginlogo d-none d-lg-block" src="../../../Assets/images/team_logo.png"/></a>
+    
+    <div class ="col-6"  style= "margin-top:75px;">
+        
+        
+        
+        
+            <p style="font-family: Courier; font-size:200%; text-align:center; color: #1b7ced;" >Please Login</p>
+
+            <form method="POST" autocomplete="off">
+
+                <fieldset class="form-group" style= "margin-bottom:15px;">
+                <input type="text" class="form-control"
+                    id="username"
+                    placeholder="Enter username"
+                    name="username" required autofocus>
+                </fieldset>
+
+                <fieldset class="form-group" style= "margin-bottom:15px;">
+                
+                    <input type="password" class="form-control"
+                    id="password"
+                    placeholder="Enter password"
+                    name="password" required>
+                </fieldset>
+
+                <p style="color: white;" >Don't have an account? <a href="/register">Join Now</a></p>    
+                 
+                <fieldset class="form-group text-right">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    <a href="/"><input type="button" class="btn btn-warning" value="Cancel"></a>
+                    
+                </fieldset>
+            </form>
+
+            <img src="../Assets/images/loginimage.png" style= "margin-top:30px;" class="login-img d-none d-lg-block" alt="login">
+            
+        
+        
+    </div>    
+    </div>
+    </div>
+  
+  </div>
+  </div>
+
+
+<%- include ../partials/bottom_nav.ejs %>  
+
+<%- include ../partials/footer.ejs %>
